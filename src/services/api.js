@@ -2,7 +2,7 @@ import axios from "axios";
 
 const API_BASE =
   import.meta.env.VITE_API_BASE ||
-  "https://vercel-help-desk-backend.vercel.app/api";
+  "https://vercel-help-desk-backend.vercel.app";
 
 const instance = axios.create({
   baseURL: API_BASE,
