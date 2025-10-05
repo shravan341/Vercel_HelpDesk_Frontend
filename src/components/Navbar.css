@@ -1,0 +1,76 @@
+/* Navbar container with gradient background */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #1a3b7c, #0d1f4f); /* light blue to dark blue */
+  color: #fff;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(200,200,200,0.3);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ffe6e6; /* soft hover highlight */
+}
+
+.navbar .brand {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.navbar .user-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar .user-section span {
+  font-weight: 500;
+}
+
+.navbar .user-section button {
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #fff; /* white button for contrast */
+  color: #2575fc; /* dark blue text */
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(37, 117, 252, 0.2);
+}
+
+.navbar .user-section button:hover {
+  background: #e0f0ff; /* light blue hover */
+  color: #2575fc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(37, 117, 252, 0.3);
+}
+
+/* Responsive for small screens */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 20px;
+  }
+  .navbar .user-section {
+    gap: 8px;
+  }
+}

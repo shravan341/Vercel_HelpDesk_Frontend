@@ -1,0 +1,92 @@
+.dashboard-container {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: url('https://support.cc/images/blog/service-desk.png?v=1670937648334597318') no-repeat center center/cover;
+  filter: blur(0px);
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dashboard-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4); /* dark overlay for better readability */
+  backdrop-filter: blur(5px); /* blur the background slightly */
+  z-index: 0;
+}
+
+.dashboard-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.dashboard-content h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* Ticket form card */
+.ticket-form-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ticket-form-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+/* Ticket list card */
+.ticket-list-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Ticket items */
+.ticket-item {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ticket-item:last-child {
+  border-bottom: none;
+}
+
+.ticket-item .status {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.status.Open { background-color: #28a745; }
+.status.Closed { background-color: #dc3545; }
+.status.Pending { background-color: #ffc107; }
+
+/* Responsive tweaks */
+@media(max-width: 768px) {
+  .dashboard-content {
+    padding: 20px;
+  }
+}
